@@ -28,6 +28,9 @@ Running the application
 ng serve
 ```
 - For admin page Navigate to [http://localhost:4200/admin](http://localhost:4200/admin)
+- For facebook parameters page Navigate to [http://localhost:4200/admin/parametreFacebook](http://localhost:4200/admin/parametreFacebook)
+- For adding an organisation page Navigate to [http://localhost:4200/admin/ajoutOrganisation](http://localhost:4200/admin/ajoutOrganisation)
+- For Showing an organisation page Navigate to [http://localhost:4200/admin/organisations/:id](http://localhost:4200/admin/organisations/:id)
 
 Browser Support
 ---------------
