@@ -1,0 +1,228 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Dashboard
+      <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+          <div class="inner">
+            <h3>2</h3>
+
+            <p>Organisations</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-ios-list"></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>4</h3>
+
+            <p>Projets Validés</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-ios-arrow-dropdown "></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+          <div class="inner">
+            <h3>10</h3>
+
+            <p>Projets en cours</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-ios-construct "></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+          <div class="inner">
+            <h3>7</h3>
+
+            <p>Projets inachevés</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-ios-alert"></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+    </div>
+    <!-- /.row -->
+    <!-- Main row -->
+    <div class="row">
+      <!-- Avancement des projets -->
+      <div class="col-xs-12">
+        <div class="box box-solid">
+          <div class="box-header">
+            <i class="fa fa-bar-chart-o"></i>
+
+            <h3 class="box-title">l'avancement des projets</h3>
+
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-default btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-default btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div class="row">
+              <div class="col-xs-6 col-md-3 text-center">
+                <input type="text" class="knob" value="30" data-width="100" data-height="100" data-fgColor="#3c8dbc" data-readonly="true">
+
+                <div class="knob-label">Projet 1</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-xs-6 col-md-3 text-center">
+                <input type="text" class="knob" value="2" data-width="100" data-height="100" data-fgColor="#f56954" data-readonly="true">
+
+                <div class="knob-label">Projet 2</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-xs-6 col-md-3 text-center">
+                <input type="text" class="knob" value="80" data-width="100" data-height="100" data-fgColor="#00a65a" data-readonly="true">
+
+                <div class="knob-label">Projet 3</div>
+              </div>
+              <!-- ./col -->
+              <div class="col-xs-6 col-md-3 text-center">
+                <input type="text" class="knob" value="60" data-width="100" data-height="100" data-fgColor="#00c0ef" data-readonly="true">
+
+                <div class="knob-label">Projet 4</div>
+              </div>
+              <!-- ./col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+
+
+      <!-- Left col -->
+      <section class="col-lg-7 connectedSortable">
+        <!-- Custom tabs (Charts with tabs)-->
+
+        <!-- /.nav-tabs-custom -->
+
+          <!-- AREA CHART -->
+
+          <!-- /.box -->
+          
+          <!-- DONUT CHART -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">ORGANISATION 1</h3>
+              <b></b>
+              <h5 class="widget-user-desc">Nombre de j'aime</h5>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body chart-responsive">
+              <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+      </section>
+      <!-- /.Left col -->
+
+
+
+      <!-- right col (We are only adding the ID to make the widgets sortable)-->
+      <section class="col-lg-5 connectedSortable">
+
+        <!-- Map box -->
+        
+            <!-- Widget: user widget style 1 -->
+            <div class="box box-widget widget-user">
+              <!-- Add the bg color to the header using any of the bg-* classes -->
+              <div class="widget-user-header bg-blue" style="background: blue center center;">
+                <h3 class="widget-user-username">Organisation 1</h3>
+                <h5 class="widget-user-desc">Projet 2</h5>
+              </div>
+              <div class="widget-user-image">
+                <img class="img-circle" src="assets/img/avatar.png" alt="User Avatar">
+              </div>
+              <div class="box-footer">
+                <div class="row">
+                  <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                      <h5 class="description-header">3,200</h5>
+                      <span class="description-text">Likes</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4 border-right">
+                    <div class="description-block">
+                      <h5 class="description-header">13,000</h5>
+                      <span class="description-text">Comments</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-4">
+                    <div class="description-block">
+                      <h5 class="description-header">15,000</h5>
+                      <span class="description-text">Shares</span>
+                    </div>
+                    <!-- /.description-block -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+            <!-- /.widget-user -->
+          
+        <!-- /.box -->
+
+      </section>
+      
+      <!-- right col -->
+    </div>
+    <!-- /.row (main row) -->
+
+  </section>
+  <!-- /.content -->
+</div>
+
+

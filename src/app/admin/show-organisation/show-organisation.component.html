@@ -1,0 +1,63 @@
+
+
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Organisation
+      <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+
+        <h3>Ajouter organisation</h3>
+        <div [hidden]="submitted">
+
+            <h4><span class="badge badge-light ">{{organisation.id}}</span> -> {{organisation.nom}}</h4>
+            <div [hidden]="submitted">
+                <form #detailOrganisationForm="ngForm">
+                  <div class="form-group">
+                    <label for="firstname">Name</label>
+                    <input type="text" class="form-control" id="bom" required
+                    [(ngModel)]="organisation.nom" name="nom" #nom="ngModel">
+                    <div [hidden]="nom.valid || nom.pristine"
+                         class="alert alert-danger">
+                        Name is required
+                    </div>
+                  </div>
+                  
+                
+                  
+                  
+            
+                  <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+                    <button type="button" class="btn btn-dark" (click)="update()" [disabled]="!detailOrganisationForm.form.valid">Update</button>
+                    <button type="button" class="btn btn-dark" (click)="delete()">Delete</button>
+                  </div>
+                </form>
+            </div>
+             
+            <div [hidden]="!submitted">
+                <p>{{message}}</p>
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+    </div>
+  </section>
+  </div>

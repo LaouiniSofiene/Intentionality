@@ -1,0 +1,264 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+      <h1>
+          Etape 1 :
+          <small>Parametres Facebook</small>
+        </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row" >
+        <img src="assets/img/Time-Line-1000px.gif"  class="center">
+        <br>
+        
+        
+        
+        <section class="col-lg-4 connectedSortable">
+          
+           <!-- DONUT CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Page principale*</h3>
+              <b></b>
+              <h5 class="widget-user-desc">Ajouter votre page</h5>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            
+            <div class="box-body chart-responsive">
+              <img src="assets/img/page-07.png" align="middle">
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          </section>
+          <section class="col-lg-4 connectedSortable">
+          
+            <!-- DONUT CHART -->
+           <div class="box box-primary">
+             <div class="box-header with-border">
+               <h3 class="box-title">Pages concurrentes</h3>
+               <b></b>
+               <h5 class="widget-user-desc">Nombre de j'aime</h5>
+ 
+               <div class="box-tools pull-right">
+                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                 </button>
+                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+               </div>
+             </div>
+             <div class="box-body chart-responsive">
+              <div class="input-group margin">
+                
+                      <input class="form-control" placeholder="https://www.facebook.com/page">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                </div>
+                
+                <!-- /btn-group -->
+                
+              </div>
+              <img class="attachment-img"  src="assets/img/fbblue.png" alt="Attachment Image">
+               <img class="attachment-img"  src="assets/img/fbblue.png" alt="Attachment Image">
+              <img class="attachment-img"  src="assets/img/fbblue.png" alt="Attachment Image">
+              <br>
+              
+                <input align="Left" type="checkbox" id="scales" name="feature"
+                       value="scales" checked />
+                <label for="scales">Scales</label>
+            
+            
+              <input align="middle" type="checkbox" id="scales" name="feature"
+                     value="scales" checked />
+              <label for="scales">Scales</label>
+          
+          
+            <input align="Right" type="checkbox" id="scales" name="feature"
+                   value="scales" checked />
+            <label for="scales">Scales</label>
+             </div>
+
+             
+             <!-- /.box-body -->
+           </div>
+           <!-- /.box -->
+ 
+           </section>
+
+           <section class="col-lg-4 connectedSortable">
+          
+            <!-- DONUT CHART -->
+           <div class="box box-primary">
+             <div class="box-header with-border">
+               <h3 class="box-title">Pages inspirantes</h3>
+               <b></b>
+               <h5 class="widget-user-desc">Nombre de j'aime</h5>
+ 
+               <div class="box-tools pull-right">
+                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                 </button>
+                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+               </div>
+             </div>
+             <div class="box-body chart-responsive">
+              <div class="input-group margin">
+                  
+                
+                      <input class="form-control" placeholder="https://www.facebook.com/page">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                </div>
+                
+                <!-- /btn-group -->
+                
+              </div>
+                <!-- /btn-group -->
+                
+             </div>
+             <!-- /.box-body -->
+           </div>
+           <!-- /.box -->
+ 
+           </section>
+          
+         </div> 
+         
+        
+         <button class="btn btn-info margin" >Suivant</button>
+         
+        <button class="btn btn-success margin" >Sauvgarder</button>
+        <br>
+        </section>
+        <br>
+        
+  </div>
+  <script>
+  (function($) {
+
+var fillCircle = function(x, y, s, color, ctx) {
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(x, y, s / 2, 0, Math.PI * 2);
+  ctx.fill();
+};
+
+$.fn.stepbar = function(opts) {
+  var items = opts.items || [];
+  var color = opts.color || '#ccc';
+  var fontColor = opts.fontColor || '#000';
+  var textColor = opts.textColor || '#000';
+  var selectedColor = opts.selectedColor || '#0000FF';
+  var selectedFontColor = opts.selectedFontColor || '#FFF';
+  var current = opts.current || 1;
+  
+  var stepBulletSize = 40;
+  var fontSize = 12;
+
+  var me = $(this);
+  var w = me.width();
+
+  var canvas = document.createElement('canvas');
+  $(canvas).appendTo(me);
+
+  var layer1 = canvas.getContext('2d');
+
+  var canvas2 = document.createElement('canvas');
+  var layer2 = canvas2.getContext('2d');
+
+  $([canvas, canvas2]).each(function() {
+    $(this).attr('width', w);
+    $(this).attr('height', 80);
+  });
+  var stepSize = Math.floor(w / items.length); 
+  var stepMiddle = Math.floor(stepSize / 2);
+
+  for(var i = 0; i < items.length; i++) {
+    var thisX = (i * stepSize) + stepMiddle;
+    var thisY = 20;
+
+    // Draw the bullet
+    // Background
+    fillCircle(thisX, thisY, stepBulletSize, color, layer2);
+    layer2.fillStyle = fontColor;
+
+    // Draw lines
+    var lineHeight = stepBulletSize / 8;
+    var lineWidth = Math.ceil(stepSize / 2);
+    var lineTop = thisY - (lineHeight / 2);
+
+    var lineLeft = thisX - lineWidth;
+    var lineRight = thisX;
+
+    var selectedLineDelta = lineHeight * 0;
+    var selectedLineTop = lineTop + selectedLineDelta / 2;
+
+    // Left
+    // if(i != 0) {//左边无进度条(除第一个外 左边都有线条)
+      layer1.fillStyle = color;
+      layer1.fillRect(lineLeft, lineTop, lineWidth, lineHeight);
+
+      if(i < current) {
+        layer2.fillStyle = selectedColor;
+        layer2.fillRect(lineLeft, selectedLineTop , lineWidth, lineHeight - selectedLineDelta);
+      }
+    // }
+
+    //Right 
+    // if(i < items.length - 1) {//右边无进度条 
+      layer1.fillStyle = color;
+      layer1.fillRect(lineRight, lineTop, lineWidth, lineHeight);
+
+      if(current == items.length){//进度完成时，右边线条全部都变色，否则当前进度的右侧线条不变色，当前进度左侧线条全变色
+        layer2.fillStyle = selectedColor;
+        layer2.fillRect(lineRight, selectedLineTop , lineWidth, lineHeight - selectedLineDelta);
+      }else{
+        if(i < current -1 ) {
+          layer2.fillStyle = selectedColor;
+          layer2.fillRect(lineRight, selectedLineTop , lineWidth, lineHeight - selectedLineDelta);
+        }
+      }
+    // }
+
+    // Draw selected bullet
+    if(i < current) {
+      fillCircle(thisX, thisY, stepBulletSize , selectedColor, layer2);
+      layer2.fillStyle = selectedFontColor;
+    }
+
+    // Text and number
+    layer2.font = fontSize + 'px Arial';
+    //当前步骤之前的，圆圈中显示对勾（√）
+    if(i < current-1){
+      var iLabel = ('\✔') + '';
+    }else{
+      iLabel = (i + 1) + '';
+    }
+    var metrics = layer2.measureText(iLabel);
+
+    layer2.fillText(iLabel, thisX - (metrics.width / 2), thisY + (fontSize / 2));
+    
+    layer2.font = 'bold ' + fontSize + 'px Arial';
+    var metrics = layer2.measureText(items[i]);
+    layer2.fillStyle = textColor;
+    layer2.fillText(items[i], thisX - (metrics.width / 2), thisY + fontSize + (stepBulletSize / 1.2));
+  }
+  layer1.drawImage(canvas2, 0, 0);
+
+};
+})(jQuery);
+</script>
+	
+  
